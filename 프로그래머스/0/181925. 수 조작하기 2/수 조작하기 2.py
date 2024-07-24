@@ -1,15 +1,13 @@
 def solution(numLog):
-    commands = []
-    
+    answer = ''
     for i in range(1, len(numLog)):
-        diff = numLog[i] - numLog[i - 1]
+        diff = numLog[i] - numLog[i-1] # 현재 값과 이전 값의 차이를 계산
         if diff == 1:
-            commands.append('w')
+            answer += 'w' # 1 더하기
         elif diff == -1:
-            commands.append('s')
+            answer += 's' # 1 빼기
         elif diff == 10:
-            commands.append('d')
+            answer += 'd' # 10 더하기
         elif diff == -10:
-            commands.append('a')
-    
-    return ''.join(commands)
+            answer += 'a' # 10 빼기
+    return answer
