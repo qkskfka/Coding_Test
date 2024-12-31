@@ -1,2 +1,3 @@
 def solution(n, t):
-    return n << t
+    answer = 2**t * n
+    return answer
