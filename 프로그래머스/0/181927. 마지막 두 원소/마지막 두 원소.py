@@ -1,6 +1,15 @@
 def solution(num_list):
-    if int(num_list[-1]) > int(num_list[-2]):
-        num_list.append(int(num_list[-1]) - int(num_list[-2]))
+    # 마지막 원소와 그 전 원소를 가져옵니다.
+    last_element = num_list[-1]
+    second_last_element = num_list[-2]
+    
+    # 조건에 따라 새로운 값을 계산합니다.
+    if last_element > second_last_element:
+        new_value = last_element - second_last_element
     else:
-        num_list.append(2*num_list[-1])
+        new_value = last_element * 2
+    
+    # 새로운 값을 리스트에 추가합니다.
+    num_list.append(new_value)
+    
     return num_list
