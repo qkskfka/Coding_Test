@@ -1,10 +1,10 @@
 def solution(arr, n):
-    for a, val in enumerate(arr):
-        if len(arr) % 2 == 0:
-            if a % 2 == 1:
-                arr[a] += n
-        else:
-            if a % 2 == 0:
-                arr[a] += n
     
+    if len(arr) %2:
+        for i in range(0, len(arr), 2):
+            arr[i] += n
+    else:
+        for i in range(1, len(arr), 2):
+            arr[i] += n
+            
     return arr
