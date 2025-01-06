@@ -4,8 +4,7 @@ def solution(num_list):
        for i in num_list:
         answer += i
     else:
-        answer += 1
+        answer = 1
         for i in num_list:
             answer *= i
     return answer
-
